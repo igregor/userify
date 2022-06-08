@@ -6,7 +6,7 @@ interface Props {
   setShowAdding: React.Dispatch<React.SetStateAction<boolean>>
 }
 const UserList: React.FC<Props> = ({setShowAdding}) => {
-  const change = () => {
+  const change = ():void => {
 setShowAdding(true);
   }
   return (

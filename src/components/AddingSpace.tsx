@@ -9,7 +9,7 @@ interface Props {
 }
 
 const AddingSpace: React.FC<Props> = ({setShowAdding})=> {
-  const change = () => {
+  const change = (): void => {
     setShowAdding(false);
   }
   return (
@@ -21,24 +21,28 @@ const AddingSpace: React.FC<Props> = ({setShowAdding})=> {
         <UserTextField
           id="user-name"
           label="name"
+          onChangeHandler={}
          
         ></UserTextField>
         <br/>
         <UserTextField
           id="user-name"
           label="last name"
+          onChangeHandler={}
           
         ></UserTextField>
          <br/>
         <UserTextField
           id="user-company"
           label="age"
+          onChangeHandler={}
           
         ></UserTextField>
          <br/>
         <UserTextField
           id="user-project"
           label="picture"
+          onChangeHandler={}
           
         ></UserTextField>
         <br/>
