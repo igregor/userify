@@ -2,13 +2,11 @@ import * as React from "react";
 import { TextField } from "@mui/material";
 
 interface Props {
-  id: string
-  label: string
-  onChangeHandler: any
-
+  id: string;
+  label: string;
+  onChangeHandler: any;
 }
 const UserTextField: React.FC<Props> = ({ id, label, onChangeHandler }) => {
-  
   return (
     <TextField
       id={id}
@@ -21,6 +19,6 @@ const UserTextField: React.FC<Props> = ({ id, label, onChangeHandler }) => {
       value=""
     />
   );
-}
+};
 
 export default UserTextField;
