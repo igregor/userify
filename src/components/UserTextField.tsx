@@ -4,7 +4,7 @@ import { TextField } from "@mui/material";
 interface Props {
   id: string;
   label: string;
-  onChangeHandler: any;
+  onChangeHandler: React.Dispatch<React.SetStateAction<string | undefined>>;
 }
 const UserTextField: React.FC<Props> = ({ id, label, onChangeHandler }) => {
   return (
@@ -16,7 +16,7 @@ const UserTextField: React.FC<Props> = ({ id, label, onChangeHandler }) => {
       onChange={(e) => {
         onChangeHandler(e.target.value);
       }}
-      value=""
+      // value=""
     />
   );
 };
