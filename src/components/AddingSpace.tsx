@@ -4,6 +4,8 @@ import { Typography } from "@mui/material";
 import { Button } from "@mui/material";
 import { useState } from "react";
 
+
+
 interface Props {
   setShowAdding: React.Dispatch<React.SetStateAction<boolean>>;
 }
@@ -13,6 +15,17 @@ const AddingSpace: React.FC<Props> = ({ setShowAdding }) => {
   const [lastName, setLastName] = useState<string>();
   const [age, setAge] = useState<string>();
   const [picture, setPicture] = useState<string>();
+
+  const dataInputs = {
+    name: name,
+    setName: setName,
+    lastName: lastName,
+    setLastName: setLastName,
+    age: age,
+    setAge: setAge,
+    picture: picture,
+    setPicture: setPicture,
+  }
   const change = (): void => {
     setShowAdding(false);
   };

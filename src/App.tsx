@@ -4,6 +4,8 @@ import UserList from "./components/UserList";
 import AddingSpace from "./components/AddingSpace";
 import { useState } from "react";
 
+export const MaterialContext = React.createContext(undefined);
+
 function App() {
   const [showAdding, setShowAdding] = useState(false);
   return (
