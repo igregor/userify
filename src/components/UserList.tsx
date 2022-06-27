@@ -6,8 +6,13 @@ import ItemUser from "./ItemUser";
 interface Props {
   setShowAdding: React.Dispatch<React.SetStateAction<boolean>>;
   showAdding: boolean;
+  userPropertiesList: any;
 }
-const UserList: React.FC<Props> = ({ setShowAdding, showAdding }) => {
+const UserList: React.FC<Props> = ({
+  setShowAdding,
+  showAdding,
+  userPropertiesList,
+}) => {
   const change = (): void => {
     setShowAdding(true);
   };
@@ -16,7 +21,7 @@ const UserList: React.FC<Props> = ({ setShowAdding, showAdding }) => {
       <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
         User list
       </Typography>
-      {!showAdding && <ItemUser />}
+      {!showAdding && <ItemUser userPropertiesList={userPropertiesList} />}
 
       <Button variant="contained" onClick={change}>
         Add user (+)
